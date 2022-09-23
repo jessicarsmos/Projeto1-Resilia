@@ -2,29 +2,30 @@ const itensNav = document.querySelectorAll('.navlist li a');
 const h1 = document.querySelector('h1');
 const p = document.querySelector('p');
 
+
+
 function typeWriter() {
-    const h1Letters= h1.innerText.split('');
-    const pLetters = p.innerHTML.split('');
-    h1.innerText = '';
-    p.innerHTML = '';
-
-    h1Letters.forEach((letter, i) => {
+        const h1Letters= h1.innerText.split('');
+        const pLetters = p.innerHTML.split('');
+        h1.innerText = '';
+        p.innerHTML = '';
+        h1Letters.forEach((letter, i) => {
+            setTimeout(() => {
+                h1.innerHTML += letter;
+            }, 75 * i)
+        });
+    
         setTimeout(() => {
-            h1.innerHTML += letter;
-        }, 75 * i)
-    });
-
-    setTimeout(() => {
-            pLetters.forEach((l, i) => {
-                setTimeout(() => {
-                    p.innerHTML += l;
-                }, 75 * i)
-            })
-    },2000)
-    console.log(h1Letters)
+                pLetters.forEach((l, i) => {
+                    setTimeout(() => {
+                        p.innerHTML += l;
+                    }, 75 * i)
+                })
+        },2000)
 }
 
-typeWriter()
+typeWriter();
+
 
 
 itensNav.forEach((link, i) => {
@@ -34,7 +35,10 @@ itensNav.forEach((link, i) => {
             window.scrollTo({
                 behavior: 'smooth',
                 top: 0
-            })
+            });
+            setTimeout(()=> {
+                typeWriter();
+            },1000)
         } else if(i === 1) {
             window.scrollTo({
                 behavior: "smooth",
