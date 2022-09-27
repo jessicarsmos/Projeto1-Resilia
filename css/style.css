@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -14,19 +13,21 @@ body {
 }
 
 img {
-    /* max-width: 100%; */
+    max-width: 100%;
+    height: 100%;
 }
 
 /* barra de navegaçao*/
 header {
     display: flex;
     justify-content: space-between;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     flex-wrap: nowrap;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    transition: all ease 0.5s;
 }
 
 .info {
@@ -48,23 +49,23 @@ h1 {
 }
 
 .img img:hover {
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
 
-.navbar{
-    text-align:start;
+.navbar {
+    text-align: start;
 }
 
-a{
+a {
     display: inline-block;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-li{
+li {
     display: inline-block;
 }
 
@@ -72,7 +73,7 @@ li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     font-size: 24px;
     transition: 0.5s background linear;
@@ -88,7 +89,7 @@ li a {
     font-family: 'Courier New', Courier, monospace, sans-serif;
 }
 
-.navbar-icon a{
+.navbar-icon a {
     color: #fff;
 }
 
@@ -98,8 +99,8 @@ li a {
 
 .navlist a:hover {
     transition: 1s;
-    color:black;
-    background: rgba(255,255,255,0.7);
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 #secao-inicio {
@@ -107,26 +108,30 @@ li a {
     justify-content: space-evenly;
 }
 
-#secao-inicio, #secao-sobre, #secao-hobbie, #secao-contato {
+#secao-inicio,
+#secao-sobre,
+#secao-hobbie,
+#secao-contato {
     height: 500px;
     margin: 0 100px;
 }
 
-h2{
+h2 {
     margin: 50px;
     font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
 
-p{
+p {
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-size: 1.8rem;
     color: #2b262d;
     text-align: center;
 }
+
 /*form*/
-form{
+form {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -141,16 +146,16 @@ label {
 
 }
 
-input{
+input {
     border: 1px solid transparent;
     outline: none;
     border-bottom: 1px solid transparent;
     padding: 7px 0px;
     margin-bottom: 25px;
-    background-color:transparent;
+    background-color: transparent;
 }
 
-textarea{
+textarea {
     background-color: transparent;
     border: transparent;
     margin-bottom: 20px;
@@ -161,7 +166,8 @@ textarea{
     padding: 15px;
     /* border: 1px solid fuchsia; */
 }
-#submit{
+
+#submit {
     background-color: #81FFEF;
     color: #FFF;
     border: 1px solid transparent;
@@ -179,6 +185,7 @@ textarea{
     border-color: #F067B4;
     color: #F067B4;
 }
+
 /*footer*/
 
 footer {
@@ -190,5 +197,86 @@ footer p {
     text-align: center;
     font-weight: bold;
     font-size: 1rem;
-    font-family:'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif
+}
+
+aside {
+    display: none;
+}
+
+.menu-opener {
+    display: grid;
+    gap: 5px;
+    margin: 10px 10px 0 0;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.menu-opener div {
+    width: 20px;
+    height: 3px;
+    background: #000;
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    aside {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header {
+        display: block;
+        width: 120px;
+        height: 100vh;
+        top: 0;
+        right: -200px;
+        z-index: 5000;
+        left: unset;
+        justify-items: flex-end;
+        align-items: flex-start;
+    }
+
+    .img {
+        height: 300px;
+        width: 400px;
+    }
+
+    #secao-inicio {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #secao-sobre {
+        height: auto;
+    }
+
+    li {
+        width: 100%;
+    }
+
+    li a {
+        font-size: 16px;
+        padding: 13px;
+        width: 80%;
+    }
+
+    .navlist2,
+    .navlist {
+        text-align: center;
+    }
 }
