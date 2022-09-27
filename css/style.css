@@ -34,7 +34,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 540px;
+    max-width: 540px;
 }
 
 h1 {
@@ -278,5 +278,8 @@ aside {
     .navlist2,
     .navlist {
         text-align: center;
+    }
+    #secao-inicio, #secao-sobre, #secao-hobbie, #secao-contato {
+        height: auto;
     }
 }
