@@ -12,7 +12,7 @@ Página sobre mim, com quatro seções e uma delas contém um formulário para c
 
 ## Links
 
-- Live Site URL: [https://jessicarsmos.github.io/about-me/](https://jessicarsmos.github.io/about-me/)
+- Live Site URL: [https://jessicarsmos.github.io/Projeto1-Resilia/](https://jessicarsmos.github.io/Projeto1-Resilia/)
 - Solution URL: [https://github.com/jessicarsmos/about-me](https://github.com/jessicarsmos/about-me)
 
 ## Construido com
